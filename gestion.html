@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Declara que este es un documento HTML5 -->
+<html lang="es"> <!-- Establece el idioma del contenido como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <link rel="stylesheet" type="text/css" href="../css/estilo.css"> <!-- Enlaza la hoja de estilo CSS -->
+    <title>Gestión de Servicios</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+</head>
+<body>
+
+<header>
+    <h1>Gestión de Servicios</h1> <!-- Encabezado principal que indica el propósito de la página -->
+    <nav> <!-- Menú de navegación -->
+        <a href="../index.html">Inicio</a> <!-- Enlace a la página de inicio -->
+        <a href="registro.html">Registro</a> <!-- Enlace a la página de registro -->
+        <a href="gestion.html">Gestión</a> <!-- Enlace a la misma página de gestión -->
+        <a href="contacto.html">Contacto</a> <!-- Enlace a la página de contacto -->
+    </nav>
+</header>
+
+<main>
+    <h2>Agregar Nuevo Servicio</h2> <!-- Subtítulo que indica la sección para agregar un nuevo servicio -->
+    <form id="formServicio"> <!-- Formulario para agregar un nuevo servicio -->
+        <label for="nombreServicio">Nombre del Servicio:</label> <!-- Etiqueta para el campo de nombre del servicio -->
+        <input type="text" id="nombreServicio" required> <!-- Campo de entrada para el nombre del servicio (obligatorio) -->
+
+        <label for="descripcionServicio">Descripción:</label> <!-- Etiqueta para el campo de descripción del servicio -->
+        <textarea id="descripcionServicio" required></textarea> <!-- Campo de entrada de texto para la descripción (obligatorio) -->
+
+        <input type="submit" value="Agregar Servicio"> <!-- Botón de envío para agregar el servicio -->
+    </form>
+
+    <h2>Servicios Existentes</h2> <!-- Subtítulo que indica la sección de servicios ya existentes -->
+    <table id="tablaServicios"> <!-- Tabla para mostrar los servicios existentes -->
+        <thead>
+            <tr>
+                <th>Nombre del Servicio</th> <!-- Encabezado de la columna para el nombre del servicio -->
+                <th>Descripción</th> <!-- Encabezado de la columna para la descripción -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los servicios se agregarán aquí dinámicamente -->
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <p>&copy; 2024 Plataforma de Gestión de Usuarios. Todos los derechos reservados.</p> <!-- Mensaje de derechos de autor -->
+</footer>
+
+<script src="../js/script.js"></script> <!-- Incluye un archivo JavaScript externo -->
+</body>
+</html>

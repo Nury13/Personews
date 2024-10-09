@@ -1,0 +1,71 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente del texto */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    padding: 0; /* Elimina el padding por defecto del navegador */
+    background-color: #f4f4f4; /* Establece el color de fondo de la página */
+}
+
+header {
+    background-color: #2067a8 ; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+    padding: 15px; /* Espaciado interno del encabezado */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+nav a {
+    color: white; /* Color de los enlaces de navegación */
+    margin: 0 10px; /* Margen horizontal entre enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+section {
+    padding: 20px; /* Espaciado interno de las secciones */
+    margin: 20px; /* Margen externo de las secciones */
+    background-color: white; /* Color de fondo de las secciones */
+    border-radius: 8px; /* Bordes redondeados para las secciones */
+}
+
+footer {
+    text-align: center; /* Alinea el texto al centro del pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    background-color: #2067a8 ; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    position: fixed; /* Mantiene el pie de página fijo en la parte inferior */
+    width: 100%; /* Ancho del pie de página al 100% */
+    bottom: 0; /* Posiciona el pie de página en la parte inferior */
+}
+
+button {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde en el botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+}
+
+button:hover {
+    background-color: #218838; /* Color de fondo del botón al pasar el mouse */
+}
+/* Animación de movimiento para el texto */
+@keyframes movimientoTexto {
+    0% {
+        transform: translateX(-100%); /* Comienza fuera de la pantalla, a la izquierda */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0); /* Se centra en la pantalla */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%); /* Se mueve fuera de la pantalla, a la derecha */
+        opacity: 0;
+    }
+}
+
+.bienvenida-animada {
+    font-size: 3em; /* Tamaño del texto */
+    animation: movimientoTexto 8s linear infinite; /* Aplica la animación por 5 segundos, repitiendo infinitamente */
+}
+
