@@ -46,6 +46,72 @@ function agregarServicio(event) {
     document.getElementById('formServicio').reset();
 }
 
+// Función para validar el formulario de registro
+function validarFormulario(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    // Obtener valores de los campos
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const contrasena = document.getElementById('contrasena').value;
+
+    // Validar campos
+    if (nombre === '' || email === '' || contrasena === '') {
+        alert('Todos los campos son obligatorios.');
+        return;
+    }
+
+    // Aquí puedes agregar la lógica para enviar el formulario o guardarlo
+
+    // Mostrar mensaje de éxito
+    mostrarMensaje('Registro completado exitosamente.');
+
+    // Limpiar el formulario
+    document.getElementById('formRegistro').reset();
+}
+
+// Función para manejar la recuperación de contraseña
+function recuperarContrasena(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    const email = document.getElementById('emailContacto').value; // Obtener el correo electrónico
+
+    // Validar campo
+    if (email === '') {
+        alert('Por favor, ingresa tu correo electrónico.');
+        return;
+    }
+
+    // Aquí puedes agregar la lógica para manejar la recuperación de contraseña
+
+    // Mostrar mensaje de éxito
+    mostrarMensaje('Enlace de recuperación enviado a ' + email);
+    
+    // Limpiar el formulario
+    document.getElementById('formRecuperarContrasena').reset();
+}
+
+// Función para manejar el envío de contactos
+function enviarContacto(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    // Aquí puedes agregar la lógica para enviar el formulario de contacto
+
+    // Mostrar mensaje de éxito
+    mostrarMensaje('Consulta enviada exitosamente.');
+
+    // Limpiar el formulario
+    document.getElementById('formContacto').reset();
+}
+
+// Función para desplazar al elemento especificado
+function desplazarAlElemento(id) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.scrollIntoView({ behavior: 'smooth' }); // Desplazarse suavemente al elemento
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Validación del formulario de registro
     const formulario = document.getElementById('formRegistro');
